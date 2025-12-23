@@ -58,13 +58,13 @@ export default function AppLayout({ children }: { children: ReactNode }) {
   };
 
   return (
-    <div className='min-h-screen flex bg-gradient-to-br from-white via-zinc-50 to-zinc-100 text-zinc-900'>
+    <div className='h-[100dvh] flex overflow-hidden bg-gradient-to-br from-white via-zinc-50 to-zinc-100 text-zinc-900'>
       {/* ================= Sidebar ================= */}
       <aside
         className={`${collapsed ? 'w-20' : 'w-72'} transition-all duration-300
-        bg-white/70 backdrop-blur-xl
-        border-r border-zinc-200
-        flex flex-col`}
+  bg-white/70 backdrop-blur-xl
+  border-r border-zinc-200
+  flex flex-col h-full`}
       >
         {/* Logo */}
         <div className='h-16 flex items-center justify-center border-b border-zinc-200'>
@@ -174,9 +174,9 @@ export default function AppLayout({ children }: { children: ReactNode }) {
       </aside>
 
       {/* ================= Main Content ================= */}
-      <main className='flex-1 p-10 overflow-y-auto'>
+      <main className='flex-1 overflow-y-auto p-4 sm:p-10'>
         <div className='max-w-[1600px] mx-auto'>
-          <div className='bg-white/70 backdrop-blur-xl rounded-2xl border border-zinc-200 shadow-sm p-8'>
+          <div className='bg-white/70 backdrop-blur-xl rounded-2xl border border-zinc-200 shadow-sm p-4 sm:p-8 h-full'>
             {children}
           </div>
         </div>
